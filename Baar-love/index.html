@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Baar ❤️</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ff7eb3,#ff758c);
+  font-family:'Segoe UI',sans-serif;
+  overflow:hidden;
+  color:white;
+}
+
+.container{
+  text-align:center;
+  animation:fadeIn 2s ease;
+}
+
+h1{
+  font-size:2.6em;
+  margin-bottom:10px;
+}
+
+p{
+  font-size:1.3em;
+}
+
+button{
+  margin-top:25px;
+  padding:12px 25px;
+  font-size:1.1em;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:#ff4f8b;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+}
+
+.heart{
+  position:absolute;
+  color:white;
+  font-size:20px;
+  animation:float 6s linear infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(100vh);opacity:0}
+  50%{opacity:1}
+  100%{transform:translateY(-10vh);opacity:0}
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:scale(0.8)}
+  to{opacity:1;transform:scale(1)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Baar ❤️</h1>
+  <p>Joke aside…<br>
+  you really do have the cutest backkk 😌💘</p>
+  <p>I smile every time I think of you.</p>
+
+  <button onclick="propose()">Tap here 🥰</button>
+</div>
+
+<script>
+function propose(){
+  alert("Bhargavi ❤️\n\nI don’t want anything fancy.\nI just want YOU.\n\nWill you be mine forever? 💍🥺");
+}
+
+setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="❤️";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.fontSize=(20+Math.random()*20)+"px";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+},300);
+</script>
+
+</body>
+</html>
